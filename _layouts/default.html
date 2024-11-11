@@ -1,6 +1,16 @@
----
-theme :
-  name : FullIt
----
-{% include JB/setup %}
-{% include themes/bootstrap/default.html %}
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}" class="h-full">
+
+{%- include head.html -%}
+
+<body class='h-full'>
+
+  {%- include nav.html -%}
+
+  {{ content }}
+
+  {%- include footer.html -%}
+
+</body>
+
+</html>
