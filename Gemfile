@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 ruby '2.4.3'
-gem "jekyll-material-theme", source: "https://rubygems.org"  # 指定源
+gem 'jekyll-material-theme', '~> 0.6.2'
 gem 'materialize-sass'
 gem "jekyll", "~> 3.6.2"
 gem "minima", "~> 2.0"
