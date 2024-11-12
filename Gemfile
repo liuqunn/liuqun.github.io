@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 ruby '2.4.3'
-gem "jekyll-material-theme"
+gem "jekyll-material-theme", source: "https://rubygems.org"  # 指定源
 gem 'materialize-sass'
 gem "jekyll", "~> 3.6.2"
 gem "minima", "~> 2.0"
@@ -11,7 +11,6 @@ gem "selenium-webdriver"
 gem "rack-jekyll"
 gem "pry"
 gem "puma"
-
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
