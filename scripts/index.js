@@ -3,16 +3,12 @@ const buildDatas = (args) => {
 
   if (args.length > 0) {
     args.forEach(item => {
-    
-      let index = item.indexOf("=")
-      if(index==-1){
-        datas += `data-${item} `
-      }else {
-        let key = item.substring(0,index)
-        let value = item.substring(index + 1,item.length)
-        datas += `data-${key}='${value}' `; 
+      let kv = item.split("=");
+      if (!kv[1]) {
+        datas += `data-${kv[0]} `
+      } else {
+        datas += `data-${kv[0]}='${kv[1]}' `;
       }
-   
     });
   }
 
@@ -24,12 +20,11 @@ const buildDatasObj = (args, defaultObj = {}) => {
 
   if (args.length > 0) {
     args.forEach(item => {
-      let sepIdx = item.indexOf("=");
-      if(sepIdx == -1) return;
-      let k = item.slice(0,sepIdx)
-      params[k] = item.slice(sepIdx+1)
+      let kv = item.split("=");
+      params[kv[0]] = kv[1];
     });
   }
+
   return Object.assign({}, defaultObj, params);
 }
 
