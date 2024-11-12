@@ -8,7 +8,7 @@ baseurl: "/mere-blog-theme"
 url: "https://www.csrhymes.com"
 permalink: pretty
 force_theme: light
-
+theme: mere-blog-theme
 paginate: 6
 paginate_path: "/page:num"
 
